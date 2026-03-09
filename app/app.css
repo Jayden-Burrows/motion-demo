@@ -1,13 +1,13 @@
 :root {
-  --background: #f7f6ea;
-  --background-shadow: #b0b9a2;
-  --light-bold: #C3ac5d;
-  --medium-bold: #C29336;
-  --dark-bold: #B87A1B;
-  --subheading: #788047;
-  --dark-subheading: #31361f;
-  --splash: #a12d2b;
-  --body-text: #31361f;
+  --background: rgb(247, 246, 234);
+  --background-shadow: rgb(176, 185, 162);
+  --light-bold: rgb(195, 172, 93);
+  --medium-bold: rgb(194, 147, 54);
+  --dark-bold: rgb(184, 122, 27);
+  --subheading: rgb(120, 128, 71);
+  --dark-subheading: rgb(49, 54, 31);
+  --splash: rgb(161, 45, 43);
+  --body-text: rgb(0, 0, 0);
 }
 
 html {
@@ -81,6 +81,7 @@ footer {
 
 footer a {
     color: var(--subheading);
+    text-decoration: none;
 }
 
 footer a:visited {
@@ -89,10 +90,6 @@ footer a:visited {
 
 #footerContactLink:hover {
   animation: show-link 350ms ease-in forwards;
-}
-
-#linkedin {
-  color: rgb(15, 76, 199);
 }
 
 /*********** Splash Page ************************/
@@ -267,7 +264,7 @@ section a {
 }
 
 section a:hover {
-  animation: show-link 150ms forwards;
+  animation: show-link 150ms ease forwards;
 }
 
 @keyframes show-link {
@@ -276,7 +273,8 @@ section a:hover {
   }
 
   100% {
-    background-color: #abffd19d;
+    /* background-color: rgba(var(--light-bold), 0.8); */
+    background-color: rgba(var(--light-bold), 0.8);
     color: var(--subheading);
   }
 }
@@ -420,6 +418,9 @@ button {
   color: var(--light-bold);
   border-radius: 8px;
   padding: 5px;
+  width: 100%;
+  margin: 0 auto;
+  border-color: var(--dark-bold);
 }
 
 button:hover {
@@ -429,9 +430,11 @@ button:hover {
 @keyframes change-color {
   0% {
     background-color: var(--splash);
+    color: var(--dark-bold)
   }
 
   100% {
-    background-color: var(--dark-subheading);
+    color: var(--splash);
+    background-color: var(--dark-bold);
   }
 }

@@ -1,68 +1,94 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const baseImgPath = process.env.NODE_ENV == 'development'
   ? ''
   : '/motion-demo';
+
+import Contact from "./contact/page";
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src={baseImgPath + "/next.svg"}
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src={baseImgPath + "/vercel.svg"}
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div>
+      <nav>
+        <p>Po Ping</p>
+        <p><Link href="/contact">Contact Po Ping</Link></p>
+      </nav>
+      <header>
+        <h1 id="name-heading">Po Ping</h1>
+        <img src={baseImgPath + "/headshot.png"} width="120" height="120"
+          alt="This is a photo of Po Ping looking very professional" id="headshot" />
+      </header>
+      <p className="address">Jade Palace, Valley of Peace &#9900; </p>
+      <p className="tagline"> Dragon Warrior, Savior of China, and Part-time Noodle Maker
+      </p>
+      <hr />
+
+        <section id="education" className="body-section">
+          <h2>Education</h2>
+          <dl>
+            <dt>Jade Palace, Master Shifu</dt>
+            <dd>2008</dd>
+          </dl>
+        </section>
+
+        <section id="honors" className="body-section">
+          <h2>Honors and Awards</h2>
+          <dl>
+            <dt>Dragon Warrior</dt>
+            <dd>2008-Present</dd>
+          </dl>
+        </section>
+
+        <section id="skills" className="body-section">
+          <h2>Skills</h2>
+          <ul>
+            <li><span className="bold">Kung Fu:</span> Wuxi Finger Hold, Thundering Wind Hammer</li>
+            <li><span className="bold">Spirituality:</span> Inner Peace, Chi Punch, Portal Creation</li>
+          </ul>
+        </section>
+
+        <section id="leadership" className="body-section">
+          <h2>Leadership and Experience</h2>
+          <dl>
+            <dt><a href="https://athome.fandango.com/content/browse/details/Kung-Fu-Panda/197926?cmp=OrganicSearch~Vudu~GoogleWatch">Dragon Warrior, Leader of Furious Five </a></dt>
+            <dd>June 2008 &mdash;Present</dd>
+          </dl>
+        </section>
+
+        <section id="projects">
+          <h2>Projects</h2>
+          <div className="three-col">
+            <div className="card">
+              <h3>Tai Lung</h3>
+              <img src={baseImgPath + "/taiLung.png"} alt="Image Tai Lung from Kung Fu Panda" />
+                <ul>
+                  <li> Mastered the art of kung fu and became the Dragon Warrior</li>
+                  <li>Defeated the infamous martial arts prodigy, Tai Lung</li>
+                </ul>
+            </div>
+            <div className="card">
+              <h3>Lord Shen</h3>
+              <img src={baseImgPath + "/shen.png"} alt="Image of Shen from Kung Fu Panda 2" />
+                <ul>
+                  <li>Saved all of China from Lord Shen's army</li>
+                  <li>Destroyed a fleet of ships by redirecting high speed projectiles</li>
+                </ul>
+            </div>
+            <div className="card">
+              <h3>Kai: The Collector</h3>
+              <img src={baseImgPath + "/kai.png"} alt="Image of Kai from Kung Fu Panda 3" />
+                <ul>
+                  <li>Led the Furious Five to overcome an army led by General Kai</li>
+                  <li>Restored the chi of all kung fu masters</li>
+                </ul>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <p> &copy; <a id="footerContactLink" href="contact.html">Po Ping</a> </p>
+        </footer>
     </div>
   );
 }

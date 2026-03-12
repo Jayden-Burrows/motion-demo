@@ -3,14 +3,14 @@
 import Link from "next/link";
 
 import Contact from "./contact/page";
-import Nav from "./nav";
-import Header from "./header";
-import Education from "./education";
-import Honors from "./honors";
-import Leadership from "./leadership";
-import Skills from "./skills";
-import Projects from "./projects";
-import Footer from "./footer";
+import Nav from "./components/nav";
+import Header from "./components/header";
+import Education from "./components/education";
+import Honors from "./components/honors";
+import Leadership from "./components/leadership";
+import Skills from "./components/skills";
+import Projects from "./components/projects";
+import Footer from "./components/footer";
 
 import { useEffect } from 'react';
 

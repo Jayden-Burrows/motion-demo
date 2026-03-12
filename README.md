@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Motion Demo
 
-## Getting Started
+Motion, formerly Framer-Motion, is a animation library that works with React and Vue to create complex physics-based animations.
 
-First, run the development server:
+## Installation
+
+Use npm to install motion in your project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install motion
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```javascript 
+import { motion } from 'motion/react'
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+// add 'motion.' before your standard React components
 
-## Learn More
+export default function Box() {
+     return (
+         <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1 }}
+         >
+         </motion.div>
+     );
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Demonstration
+Feel free to fork and clone this  repository to test adding Motion on an existing React App!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+There should also be an existing fork with a few basic examples.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Credits
+Here are some resources I used while making my presentation and demo.
 
-## Deploy on Vercel
+[Motion's Official Documentation](https://motion.dev/docs/react)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[Do you still need Framer Motion by Matt Perry](https://motion.dev/magazine/do-you-still-need-framer-motion)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[ Springy Animated Modals // Framer Motion & React Tutorial for Beginners by Fireship](https://www.youtube.com/watch?v=SuqU904ZHA4)

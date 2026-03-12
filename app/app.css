@@ -86,9 +86,9 @@ nav .toggleBall {
   }
   to {
     color: var(--splash);
-    background-image: linear-gradient(to left, var(--medium-bold), var(--light-bold), var(--background));
+    background-image: linear-gradient(-45deg, var(--dark-bold), var(--medium-bold), var(--light-bold), var(--background));
     background-size: 400% auto;
-    box-shadow: 3px 3px #041b38a2;
+    box-shadow: 3px 3px var(--background-shadow);
   }
 }
 
@@ -139,7 +139,7 @@ header {
   https://www.amitmerchant.com/animated-gradient-effect-in-css/
  */
 header h1 {
-  background-image: linear-gradient(to top left, var(--medium-bold), var(--light-bold), var(--background));
+  background-image: linear-gradient(-45deg, var(--dark-bold), var(--medium-bold), var(--light-bold), var(--background));
   background-clip: text;
   color: transparent;
   background-size: 400% auto;
@@ -149,7 +149,7 @@ header h1 {
   border-right: 3px solid var(--background);
   animation: show-letters 2800ms steps(18) forwards,
     show-blinking 700ms 2800ms 4 forwards,
-    gradient 3s linear infinite;
+    gradient 10s linear infinite;
   interpolate-size: allow-keywords;
   padding-right: 0.125em;
   font-size: 2.5em;
@@ -463,4 +463,65 @@ form button:hover {
     color: var(--splash);
     background-color: var(--dark-bold);
   }
+}
+
+/* ************* Motion Stuff *************** */
+
+.modalOpenButton {
+  margin: 10px 0 0 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--medium-bold);
+  color: var(--background);
+  font-size: 1.15em;
+  font-family: "Source Serif 4", serif;
+  font-weight: 700;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background-color: var(--background-shadow);
+  height: clamp(50%, 700px, 90%);
+  width: clamp(30%, 500px, 90%);
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.modal iframe {
+  width: 90%;
+  height: 80%; 
+  overflow: scroll;
+  border: none;
+  border-radius: 10px;
+}
+
+.modal button {
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--subheading);
+  color: var(--background);
+  font-size: 1.5em;
+  font-family: "Source Serif 4", serif;
+  font-weight: 700;
 }

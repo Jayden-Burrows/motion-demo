@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Home from "../page";
-import Nav from "../nav";
-import Header from "../header";
+import Nav from "../components/nav";
+import Header from "../components/header";
 import Form from "./form";
-import Footer from "../footer";
+import Footer from "../components/footer";
 
 export default function Contact() {
   return (

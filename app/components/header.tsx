@@ -37,7 +37,7 @@ function Subheading({ about }: SubheadingProps) {
 
     if (about) {
         return(
-            <div>
+            <div id="subheading">
                 <p className="address">Jade Palace, Valley of Peace </p>
                 <p className="tagline"> Dragon Warrior, Savior of China, and Part-time Noodle Maker
                 </p>

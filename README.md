@@ -2,6 +2,13 @@
 
 Motion, formerly Framer-Motion, is a animation library that works with React and Vue to create complex physics-based animations.
 
+## Demonstration
+Feel free to fork and clone this  repository to test adding Motion on an existing React App!
+
+There should also be an existing fork with a few basic examples.
+
+[Here](https://youtu.be/2jjwpKIV8QY) is a video version of my presentation! 
+
 ## Installation
 
 Use npm to install motion in your project
@@ -28,10 +35,6 @@ export default function Box() {
 }
 ```
 
-## Demonstration
-Feel free to fork and clone this  repository to test adding Motion on an existing React App!
-
-There should also be an existing fork with a few basic examples.
 
 ## Credits
 Here are some resources I used while making my presentation and demo.

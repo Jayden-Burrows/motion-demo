@@ -4,9 +4,14 @@ const baseImgPath = process.env.NODE_ENV == 'development'
     ? ''    
     : '/motion-demo'; 
 
+type NavProps = {
+    link: string,
+    about: boolean,
+};
+
 import { useState } from 'react';
 
-export default function Nav() {
+export default function Nav({ link, about }: NavProps) {
     const [isLight, setIsLight] = useState(true);
     const toggleDarkMode = () => {
         if (document.documentElement.getAttribute('data-theme') == 'dark') {
@@ -19,7 +24,7 @@ export default function Nav() {
     return(
         <div>
             <nav>
-            <p> <a href="#"> Po Ping </a></p>
+            <p><Link href={link}>{about ? "Contact" : "About"} Po Ping</Link></p>
             <button
                 className="toggleContainerOn"
                 style={{
